@@ -19,7 +19,7 @@ var SLIDE_CONFIG = {
   // Author information
   presenters: [{
     name: 'Johannes Barop',
-    company: 'Freelancer',
+    company: 'freelancing web application developer',
     gplus: 'http://bit.ly/jbarop',
     twitter: '@jobarop',
     www: 'http://www.barop.de',
