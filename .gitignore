@@ -36,3 +36,9 @@ ehthumbs.db
 Icon?
 Thumbs.db
 *~
+samples-source/core/.classpath
+samples-source/core/.project
+samples-source/core/.settings
+samples-source/html/.classpath
+samples-source/html/.project
+samples-source/html/.settings
