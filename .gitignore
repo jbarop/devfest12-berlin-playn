@@ -42,3 +42,6 @@ samples-source/core/.settings
 samples-source/html/.classpath
 samples-source/html/.project
 samples-source/html/.settings
+samples
+.project
+samples-source/.settings
