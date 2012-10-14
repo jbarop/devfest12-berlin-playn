@@ -1,5 +1,6 @@
 <module rename-to='samples'>
   <inherits name='playn.PlayN' />
+  <inherits name="org.jbox2d.GwtBox2D" />
   <inherits name="playn.logging.Enhanced" />
 
   <source path='core' />

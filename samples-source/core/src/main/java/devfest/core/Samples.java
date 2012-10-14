@@ -21,7 +21,7 @@ public class Samples implements Game {
    * Array of all samples.
    */
   private final Game[] samples = {
-      new Sample01(), new Sample02()
+      new Sample01(), new Sample02(), new Sample03(), new Sample04(), new Sample05(), new Sample06()
   };
 
   /**
