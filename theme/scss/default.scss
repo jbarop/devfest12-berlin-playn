@@ -409,7 +409,7 @@ code {
 }
 
 iframe {
-  width: 100%;
+  width: 800px;
   height: $slide-height - ($slide-top-bottom-padding * 2) - ($article-content-top-padding * 2);
   background: white;
   border: 0px solid $gray-1;
