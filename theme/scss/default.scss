@@ -231,7 +231,8 @@ slides > slide {
     height: 100%;
 
     > iframe {
-      height: 98%;
+      height: 500px;
+      width: 800px;
     }
   }
 }
@@ -411,7 +412,7 @@ iframe {
   width: 100%;
   height: $slide-height - ($slide-top-bottom-padding * 2) - ($article-content-top-padding * 2);
   background: white;
-  border: 1px solid $gray-1;
+  border: 0px solid $gray-1;
   @include box-sizing(border-box);
 }
 
@@ -882,8 +883,8 @@ article.smaller {
 }
 
 aside.gdbar {
-  height: 97px;
-  width: 215px;
+  height: 103px;
+  width: 277px;
   position: absolute;
   left: -1px;
   top: 125px;
@@ -911,7 +912,7 @@ aside.gdbar {
   }
 
   img {
-    width: 85px;
+    // width: 85px;
     height: 85px;
     position: absolute;
     right: 0;
