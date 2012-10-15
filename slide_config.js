@@ -22,7 +22,7 @@ var SLIDE_CONFIG = {
     company: 'freelancing web application developer',
     gplus: 'http://bit.ly/jbarop',
     twitter: '@jobarop',
-    www: 'http://www.barop.de',
+    www: '',
     github: 'https://github.com/jbarop'
   }/*, {
     name: 'Second Name',
