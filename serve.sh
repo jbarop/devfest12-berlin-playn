@@ -6,6 +6,8 @@
 #
 # Copyright 2012 Eric Bidelman <ebidel@gmail.com>
 
+./build-samples.sh
+
 port=$1
 if [ $#  -ne  1 ]
 then
