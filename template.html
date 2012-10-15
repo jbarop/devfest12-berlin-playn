@@ -1,416 +1,529 @@
 <!--
-Google IO 2012 HTML5 Slide Template
+DevFest Berlin 2012 - PlayN
+
+Authors: Johannes Barop
+
+Build with the Google IO 2012 HTML slide template.
 
 Authors: Eric Bidelman <ebidel@gmail.com>
-         Luke Mahé <lukem@google.com>
-
+         Luke Mahe <lukem@google.com>
 URL: https://code.google.com/p/io-2012-slides
 -->
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Google IO 2012</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-  <!--This one seems to work all the time, but really small on ipad-->
-  <!--<meta name="viewport" content="initial-scale=0.4">-->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="stylesheet" media="all" href="theme/css/default.css">
-  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
-  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
-</head>
-<body style="opacity: 0">
+	
+	<head>
+		<title>DevFest Berlin 2012</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+		<!--This one seems to work all the time, but really small on ipad-->
+		<!--<meta name="viewport" content="initial-scale=0.4">-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" media="all" href="theme/css/default.css">
+		<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+		<base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+		<script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+		<script type="text/javascript">
+			// Attach the playn-root element to the given element and execute the given sample
+			function setSample(element, sample) {
+				var playnroot = document.getElementById('playn-root');
+				playnroot.parentNode.removeChild(playnroot);
+				element.appendChild(playnroot);
+				window.setCurrentSample(sample);
+			}
+		</script>
+	</head>
+	
+	
+	<body style="opacity: 0">
+		
+		
+		<div id="playn-container">
+			<div id="playn-root"></div>
+		</div>
+		<script src='samples/samples.nocache.js'></script>
+		
+		
+		<slides class="layout-widescreen">
+			
+			
+			<slide class="title-slide segue nobackground">
+				<aside class="gdbar"><img src="images/GDG-program-logo.png"></aside>
+				<!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+				<hgroup class="auto-fadein">
+					<h1 data-config-title><!-- populated from slide_config.json --></h1>
+					<h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+					<p data-config-presenter><!-- populated from slide_config.json --></p>
+				</hgroup>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>About me</h2>
+				</hgroup>
+				<article>
+					<img class="photo" src="images/jb.jpg" />
+					<ul>
+						<li>
+							Johannes Barop &lt;<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#98;&#64;&#98;&#97;&#114;&#111;&#112;&#46;&#100;&#101;">&#106;&#98;&#64;&#98;&#97;&#114;&#111;&#112;&#46;&#100;&#101;</a>&gt;
+						</li>
+						<li>Hamburg, Germany</li>
+						<li>Freelancing web application developer</li>
+						<li>Java and GWT</li>
+						<li>Game development for fun</li>
+					</ul>
+				</article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>Motivation behind PlayN</h2>
+				</hgroup>
+				<article>
+					<ul>
+						<!-- todo: prototype  -->
+						<li>Develop games for many different platforms and environments</li>
+						<li>PCs, Smartphones, Tablets, SmartTVs, Social Networks</li>
+						<li>Linux, MacOS, Windows, Android, iOS, webOS</li>
+					</ul>
+					<ul>
+						<li>This takes a huge amount of development resources</li>
+						<li>Hard to maintain</li>
+						<li>No fun at all</li>
+					</ul>
+				</article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>PlayN</h2>
+				</hgroup>
+				<article>
+					<ul>
+						<li>Formerly known as "ForPlay"</li>
+						<li>Cross platform game abstraction library</li>
+						<li>Write one code base and run it natively on different platforms (Java, HTML5, Android, iOS, Flash)</li>
+						<li>Based on Java</li>
+						<li>Open sourced under Apache License 2.0</li>
+						<li>Active project with contributors from Google and game studios</li>
+						<li>Used for the Chrome version of Angry Birds</li>
+						<li><a href="http://code.google.com/p/playn/">code.google.com/p/playn</a></li>
+						<li><a href="http://developers.google.com/playn/">developers.google.com/playn</a></li>
+					</ul>
+				</article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>Why Java?</h2>
+				</hgroup>
+				<article>
+					<ul>
+						<li>Runs natively on Android</li>
+						<li>Great optimizations through GWT</li>
+						<li>Reuse the GWT compiler to generate other languages like Flex</li>
+						<li>Familiar tools and libraries</li>
+						<li>Box2D (C++) -> JBox2D (Java) -> GWTBox2D (GWT)</li>
+					</ul>
+				</article>
+			</slide>
+			
+			
+			<slide>
+				<article class="flexbox vcenter">
+					<iframe data-src="http://savagelook.com/demos/box2djs/helloworld.html"></iframe>
+					<p>Demo Source: <a href="http://savagelook.com/demos/box2djs/helloworld.html">savagelook.com</a></p>
+				</article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>Abstraction</h2>
+				</hgroup>
+				<article class="smaller">
+					<p>Implement the Game inferface using the core API</p>
+					<pre class="prettyprint" data-lang="java">
+<b>import static playn.core.PlayN.*;</b>
 
-<slides class="layout-widescreen">
+public class MyGame implements <b>playn.core.Game</b> {
 
-  <slide class="logoslide nobackground">
-    <article class="flexbox vcenter">
-      <span><img src="images/google_developers_logo.png"></span>
-    </article>
-  </slide>
-
-  <slide class="title-slide segue nobackground">
-    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
-    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
-    <hgroup class="auto-fadein">
-      <h1 data-config-title><!-- populated from slide_config.json --></h1>
-      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
-      <p data-config-presenter><!-- populated from slide_config.json --></p>
-    </hgroup>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with Bullets</h2>
-    </hgroup>
-    <article>
-      <ul>
-        <li>Titles are formatted as Open Sans with bold applied and font size is set at 45</li>
-        <li>Title capitalization is title case
-          <ul>
-            <li>Subtitle capitalization is title case</li>
-          </ul>
-        </li>
-        <li>Subtitle capitalization is title case</li>
-        <li>Titles and subtitles should never have a period at the end</li>
-      </ul>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with Bullets that Build</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <p>A list where items build:</p>
-      <ul class="build">
-        <li>Pressing 'h' highlights code snippets</li>
-        <li>Pressing 'p' toggles speaker notes (if they're on the current slide)</li>
-        <li>Pressing 'f' toggles fullscreen viewing</li>
-        <li>Pressing 'w' toggles widescreen</li>
-        <li>Pressing 'o' toggles overview mode</li>
-        <li>Pressing 'ESC' toggles off these goodies</li>
-      </ul>
-      <p>Another list, but items fade as they build:</p>
-      <ul class="build fade">
-        <li>Hover over me!</li>
-        <li>Hover over me!</li>
-        <li>Hover over me!</li>
-      </ul>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with (Smaller Font)</h2>
-    </hgroup>
-    <article class="smaller">
-      <ul>
-        <li>All <a href="http://google.com">links</a> open in new tabs.</li>
-        <li>To change that this, add <code>target="_self"</code> to the link.</li>
-      </ul>
-    </article>
-  </slide>
-
-  <slide hidden>
-    Hidden slides are left out of the presentation.
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Code Slide (with Subtitle Placeholder)</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
-      <pre class="prettyprint" data-lang="javascript">
-&lt;script type='text/javascript'&gt;
-  // Say hello world until the user starts questioning
-  // the meaningfulness of their existence.
-  function helloWorld(world) {
-    <b>for (var i = 42; --i &gt;= 0;) {
-      alert('Hello ' + String(world));
-    }</b>
+  void init() {
+    /** ... **/
+    <b>playn.core.ImageLayer bg = graphics().createImageLayer(bgImage);
+    graphics().rootLayer().add(bg);</b>
   }
-&lt;/script&gt;
-</pre>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Code Slide (Smaller Font)</h2>
-    </hgroup>
-    <article class="smaller">
-      <pre class="prettyprint" data-lang="javascript">
-// Say hello world until the user starts questioning
-// the meaningfulness of their existence.
-function helloWorld(world) {
-  for (var i = 42; --i &gt;= 0;) {
-    alert('Hello ' + String(world));
-  }
+  /** ... **/
 }
-</pre>
-<pre class="prettyprint" data-lang="css">
-&lt;style&gt;
-  p { color: pink }
-  b { color: blue }
-&lt;/style&gt;
-</pre>
-<pre class="prettyprint" data-lang="html">
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-  &lt;title>My Awesome Page&lt;/title>
-&lt;/head>
-&lt;body>
-  &lt;p&gt;Hello world&lt;/p&gt;
-&lt;body>
-&lt;/html>
-</pre>
-    </article>
-  </slide>
+					</pre>
+					<p>Each platform implements the core API</p>
+					<pre class="prettyprint" data-lang="java">
+<b>class playn.html.HtmlImageLayer implements playn.core.ImageLayer</b> {
+  /** ... **/
+}
+					</pre>
+				</article>
+			</slide>
 
-  <slide>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>Point I wanted to make #1</li>
-          <li>Point I wanted to make #2</li>
-          <li>Point I wanted to make #3</li>
-          <li>Example <a href="#">link</a> in notes.</li>
-        </ul>
-        <p><b>Remember to say this tag line!</b></p>
-      </section>
-    </aside>
-    <hgroup>
-      <h2>Slide with Speaker Notes</h2>
-    </hgroup>
-    <article>
-      <p>Press 'p' to toggle speaker notes.</p>
-    </article>
-  </slide>
 
-  <slide>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>See this amazing link: <a href="http://www.google.com">link</a>.</li>
-        </ul>
-        <p><b>Remember to say this tag line!</b></p>
-      </section>
-    </aside>
-    <hgroup>
-      <h2>Presenter Mode</h2>
-    </hgroup>
-    <article>
-      <p>Add <code><a href="?presentme=true" target="_self">?presentme=true</a></code> to the URL to enabled presenter mode.
-      This setting is sticky, meaning refreshing the page will persist presenter
-      mode.</p>
-      <p>Hit <code><a href="?presentme=false" target="_self">?presentme=false</a></code> to disable presenter mode.</p>
-    </article>
-  </slide>
+			<slide>
+				<hgroup>
+					<h2>Abstraction</h2>
+				</hgroup>
+				<article>
+					<div class="centered" style="margin-top:2em">
+						<img src="images/playN-api-layout.png">
+					</div>
+				</article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>Some implemented sub systems</h2>
+				</hgroup>
+				<article>
+					<ul>
+						<li>2D Physics</li>
+						<li>2D Graphics</li>
+						<li>Input (Keyboard, Mouse, Touch)</li>
+						<li>Sound</li>
+						<li>Asset loading</li>
+						<li>Networking</li>
+						<li>Storage</li>
+						<li>Shaders (GL based platforms only)</li>
+					</ul>
+					<ul>
+						<li><a href="http://code.google.com/p/playn/wiki/PlatformStatus">code.google.com/p/playn/wiki/PlatformStatus</a></li>
+					</ul>
+				</article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>Graphics infrastructure</h2>
+				</hgroup>
+				<article>
+					<div class="centered" style="margin-top:2em">
+						<img src="images/playN-layers-diagram.png">
+					</div>
+					<ul>
+						<li>Hierarchical layer system</li>
+						<li>Transformations (translate, scale, rotate)</li>
+						<li>Different layer types with specialized drawing functionality</li>
+						<li>Acceleration (OpenGL, OpenGL ES, WebGL, HTML5 Canvas, CSS3)</li>
+					</ul>
+				</article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>Layer types</h2>
+				</hgroup>
+				<article>
+					<div class="centered" style="margin-top:2em">
+						<img src="images/playN-layers.png">
+					</div>
+					<ul>
+						<li>Group Layer: Groups multiple layers into on layer</li>
+						<li>Image Layer: Displays an image</li>
+						<li>Surface Layer: Renders multiple images into a single surface</li>
+						<li>Canvas Layer: Provides 2D Canvas API</li>
+					</ul>
+				</article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>Let's create a game</h2>
+				</hgroup>
+				<article>
+					<p>Create a project</p>
+					<pre class="prettyprint" data-lang="shell">
+mvn archetype:generate \
+ -DarchetypeGroupId=com.googlecode.playn \
+ -DarchetypeArtifactId=playn-archetype \
+ -DarchetypeVersion=1.4
+					</pre>
+					<p>Run it</p>
+					<pre class="prettyprint" data-lang="shell">
+mvn test -Pjava # run it with java
+mvn test -Phtml # run it with gwt
+					</pre>
+					<p>Android and iOS work too but need some setup.</p>
+					<p> See <a href="http://code.google.com/p/playn/w">code.google.com/p/playn/w</a> for details.<p>
+				</article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>Let's create a game</h2>
+				</hgroup>
+				<article class="smaller">
+					<pre class="prettyprint" data-lang="java">
+public class MyGame implements Game {
 
-  <slide>
-    <hgroup>
-      <h2>Slide with Image</h2>
-    </hgroup>
-    <article>
-      <img src="images/chart.png" class="reflect" alt="Description" title="Description">
-      <footer class="source">source: place source info here</footer>
-    </article>
-  </slide>
+  @Override
+  public void init() {<b>
+    Image bgImage = assets().getImage("images/bg.png");
+    ImageLayer bgLayer = graphics().createImageLayer(bgImage);
+    graphics().rootLayer().add(bgLayer);</b>
+  }
 
-  <slide>
-    <hgroup>
-      <h2>Slide with Image (Centered horz/vert)</h2>
-    </hgroup>
-    <article class="flexbox vcenter">
-      <img src="images/barchart.png" alt="Description" title="Description">
-      <footer class="source">source: place source info here</footer>
-    </article>
-  </slide>
+  @Override
+  public void paint(final float alpha) {
+  }
 
-  <slide>
-    <hgroup>
-      <h2>Table Option A</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <table>
-        <tr>
-          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
-        </tr>
-        <tr>
-          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
+  @Override
+  public void update(final float delta) {
+  }
 
-  <slide>
-    <hgroup>
-      <h2>Table Option A (Smaller Text)</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article class="smaller">
-      <table>
-        <tr>
-          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
-        </tr>
-        <tr>
-          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
+  @Override
+  public int updateRate() {
+    return 25;
+  }
 
-  <slide>
-    <hgroup>
-      <h2>Table Option B</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <table class="rows">
-        <tr>
-          <th>Header 1</th><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 2</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 3</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 4</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 5</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
+}
+					</pre>
+				</article>
+			</slide>
+			
+			
+			<slide slideenter="setSample(this.childNodes[1], 0)">
+				<hgroup>
+					<h2>Let's create a game</h2>
+				</hgroup>
+				<article></article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>Let's create a game</h2>
+				</hgroup>
+				<article>
+					<pre class="prettyprint" data-lang="java">
+@Override
+public void init() {
+  /** **/
+<b>
+  Image cloudImage = assets().getImage("images/cloud.png");
+  ImageLayer cloudLayer = graphics().createImageLayer(cloudImage);
+  graphics().rootLayer().add(cloudLayer);</b>
+}
+					</pre>
+				</article>
+			</slide>
+			
+			
+			<slide slideenter="setSample(this.childNodes[1], 1)">
+				<hgroup>
+					<h2>Add a cloud</h2>
+				</hgroup>
+				<article></article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>Animate the cloud</h2>
+				</hgroup>
+				<article>
+					<pre class="prettyprint" data-lang="java">
+@Override
+public void paint(final float delta) {<b>
+  couldX += delta;
+  if (couldX > bgImage.width() - cloudImage.width()) {
+    couldX = -cloudImage.width();
+  }
+  cloudLayer.setTranslation(couldX, couldY);</b>
+}
+					</pre>
+				</article>
+			</slide>
+			
+			
+			<slide slideenter="setSample(this.childNodes[1], 2)">
+				<hgroup>
+					<h2>Animate the cloud</h2>
+				</hgroup>
+				<article></article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>Add balls with click/touch</h2>
+				</hgroup>
+				<article>
+					<pre class="prettyprint" data-lang="java">
+@Override
+public void init() {
+  /** **/
 
-  <slide>
-    <hgroup>
-      <h2>Slide Styles</h2>
-    </hgroup>
-    <article class="smaller">
-      <div class="columns-2">
-        <ul>
-          <li class="red">class="red"</li>
-          <li class="red2">class="red2"</li>
-          <li class="red3">class="red3"</li>
-          <li class="blue">class="blue"</li>
-          <li class="blue2">class="blue2"</li>
-          <li class="blue3">class="blue3"</li>
-          <li class="green">class="green"</li>
-          <li class="green2">class="green2"</li>
-        </ul>
-        <ul>
-          <li class="green3">class="green3"</li>
-          <li class="yellow">class="yellow"</li>
-          <li class="yellow2">class="yellow2"</li>
-          <li class="yellow3">class="yellow3"</li>
-          <li class="gray">class="gray"</li>
-          <li class="gray2">class="gray2"</li>
-          <li class="gray3">class="gray3"</li>
-          <li class="gray4">class="gray4"</li>
-        </ul>
-      </div>
-      <div class="centered" style="margin-top:2em">
-        I am centered text with a <button>Button</button> and <button disabled>Disabled</button> button.
-      </div>
-    </article>
-  </slide>
+  ballImage = assets().getImage("images/ball.png");
+  ballLayer = graphics().createGroupLayer();
+  graphics().rootLayer().add(ballLayer);<b>
+  pointer().setListener(new Pointer.Adapter() {
+    @Override
+    public void onPointerEnd(final Pointer.Event event) {
+      Ball ball = new Ball(ballImage, event.x(), event.y());
+      ballLayer.add(ball.layer);
+    }
+  });</b>
+}
+					</pre>
+				</article>
+			</slide>
+			
+			
+			<slide slideenter="setSample(this.childNodes[1], 3)">
+				<hgroup>
+					<h2>Add balls with click/touch</h2>
+				</hgroup>
+				<article></article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>Add physics</h2>
+				</hgroup>
+				<article class="smaller">
+					<pre class="prettyprint" data-lang="java">
+public Ball(final Image image, final float x, final float y) {
+  /** **/
+<b>
+  BodyDef bodyDef = new BodyDef();
+  bodyDef.type = BodyType.DYNAMIC;
+  bodyDef.position = new Vec2(x, y);
+  body = world.createBody(bodyDef);
+  FixtureDef fixtureDef = new FixtureDef();
+  fixtureDef.shape = new CircleShape();
+  fixtureDef.shape.m_radius = radius;
+  fixtureDef.density = 1.0f;
+  fixtureDef.friction = 0.3f;
+  body.createFixture(fixtureDef);
+  body.setTransform(new Vec2(x, y), 0.0f);</b>
+}
+					</pre>
+				</article>
+			</slide>
+			
+			
+			<slide>
+				<hgroup>
+					<h2>Add physics</h2>
+				</hgroup>
+				<article class="smaller">
+					<pre class="prettyprint" data-lang="java">
+@Override
+public void init() {
+  /** **/
+<b>
+  world = new World(new Vec2(0.0f, 10.0f), true);
+  world.setWarmStarting(true);
+  world.setAutoClearForces(true);</b>
+}
 
-  <slide class="segue dark nobackground">
-    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
-    <hgroup class="auto-fadein">
-      <h2>Segue Slide</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-  </slide>
+@Override
+public void update(final float delta) {
+  <b>world.step(delta, 10, 10);</b>
+}
+					</pre>
+				</article>
+			</slide>
 
-  <slide class="fill nobackground" style="background-image: url(images/sky.jpg)">
-    <hgroup>
-      <h2 class="white">Full Image (with Optional Header)</h2>
-    </hgroup>
-    <footer class="source white">www.flickr.com/photos/25797459@N06/5438799763/</footer>
-  </slide>
 
-  <slide class="segue dark quote nobackground">
-    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
-    <article class="flexbox vleft auto-fadein">
-      <q>
-        This is an example of quote text.
-      </q>
-      <div class="author">
-        Name<br>
-        Company
-      </div>
-    </article>
-  </slide>
+			<slide slideenter="setSample(this.childNodes[1], 4)">
+				<hgroup>
+					<h2>Add physics</h2>
+				</hgroup>
+				<article></article>
+			</slide>
 
-  <slide>
-    <hgroup>
-      <h2>Slide with Iframe</h2>
-    </hgroup>
-    <article>
-      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
-    </article>
-  </slide>
 
-  <slide>
-    <article>
-      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
-    </article>
-  </slide>
+			<slide>
+				<hgroup>
+					<h2>Add some bounds to the screen</h2>
+				</hgroup>
+				<article class="smaller">
+					<pre class="prettyprint" data-lang="java">
+@Override
+public void init() {
+  /** **/
+<b>
+  float physWidth = physUnitPerScreenUnit * 640;
+  float physHeight = physUnitPerScreenUnit * 480;
+  Body ground = world.createBody(new BodyDef());
 
-  <slide class="thank-you-slide segue nobackground">
-    <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>
-    <article class="flexbox vleft auto-fadein">
-      <h2>&lt;Thank You!&gt;</h2>
-      <p>Important contact information goes here.</p>
-    </article>
-    <p class="auto-fadein" data-config-contact>
-      <!-- populated from slide_config.json -->
-    </p>
-  </slide>
+  PolygonShape bottom = new PolygonShape();
+  bottom.setAsEdge(new Vec2(0, physHeight), new Vec2(physWidth, physHeight));
+  ground.createFixture(bottom, 0.0f);
 
-  <slide class="logoslide dark nobackground">
-    <article class="flexbox vcenter">
-      <span><img src="images/google_developers_logo_white.png"></span>
-    </article>
-  </slide>
+  PolygonShape top = new PolygonShape();
+  top.setAsEdge(new Vec2(0, 0), new Vec2(physWidth, 0));
+  ground.createFixture(top, 0.0f);
 
-  <slide class="backdrop"></slide>
+  PolygonShape left = new PolygonShape();
+  left.setAsEdge(new Vec2(0, 0), new Vec2(0, physHeight));
+  ground.createFixture(left, 0.0f);
 
-</slides>
+  PolygonShape right = new PolygonShape();
+  right.setAsEdge(new Vec2(physWidth, 0), new Vec2(physWidth, physHeight));
+  ground.createFixture(right, 0.0f);</b>
+}
+					</pre>
+				</article>
+			</slide>
+			
+			
+			<slide slideenter="setSample(this.childNodes[1], 5)">
+				<hgroup>
+					<h2>Add some bounds to the screen</h2>
+				</hgroup>
+				<article></article>
+			</slide>
+			
+			<slide>
+				<article class="flexbox vcenter">
+					<h2>Questions?</h2>
+				</article>
+			</slide>
+			
+			<slide class="thank-you-slide segue nobackground">
+				<aside class="gdbar right">
+					<img src="images/GDG-program-logo.png">
+				</aside>
+				<article class="flexbox vleft auto-fadein">
+					<h2>&lt;Thank You!&gt;</h2>
+					<p class="smaller">Please give feedback</p>
+				</article>
+				<p class="auto-fadein" data-config-contact>
+				<!-- populated from slide_config.json -->
+				</p>
+			</slide>
+			
+			
+			<slide class="backdrop" />
+			
+			
+		</slides>
 
-<script>
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-</script>
-
-<!--[if IE]>
-  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
-  <script>CFInstall.check({mode: 'overlay'});</script>
-<![endif]-->
-</body>
+		<!--[if IE]>
+			<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+			<script>CFInstall.check({mode: 'overlay'});</script>
+		<![endif]-->
+		
+	</body>
 </html>
